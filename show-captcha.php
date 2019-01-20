@@ -1,4 +1,4 @@
-<?PHP
+<?php
 /*
     Contact Form from HTML Form Guide.
     show-captcha.php is used to display and validate image captcha.

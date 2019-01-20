@@ -1,21 +1,15 @@
 <?php
+ 
+    define('DBHOST', 'localhost');
+    define('DBUSER', 'root');
+    define('DBPASS', '');
+    define('DBNAME', 'venturahunt');
+    
+    $dbcon = mysqli_connect(DBHOST, DBUSER, DBPASS, DBNAME);
 
- // this will avoid mysql_connect() deprecation error.
- error_reporting( ~E_DEPRECATED & ~E_NOTICE );
- // but I strongly suggest you to use PDO or MySQLi.
- 
- define('DBHOST', 'localhost');
- define('DBUSER', 'root');
- define('DBPASS', '');
- define('DBNAME', 'venturahunt');
- 
- $conn = mysql_connect(DBHOST,DBUSER,DBPASS);
- $dbcon = mysql_select_db(DBNAME);
- 
- if ( !$conn ) {
-  die("Connection failed : " . mysql_error());
- }
- 
- if ( !$dbcon ) {
-  die("Database Connection failed : " . mysql_error());
- }
+    if (!$dbcon) {
+        echo "Error: Unable to connect to MySQL." . mysqli_connect_error() . PHP_EOL;
+        exit();
+    }
+    
+?>

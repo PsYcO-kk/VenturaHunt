@@ -7,10 +7,10 @@ $questionpath = $_POST['questionpath'];
 $useranswer = $_POST['useranswer'];
 $useranswer = strtolower($useranswer);
 //$useranswer = str_replace(' ', '', $useranswer);
-$answerresult = mysql_query("select id,answer from questions where questionpath='$questionpath'");
-$questions = mysql_query("select tym, round1, solvedquestions, current from profile where username='$username'");
-$dbanswer = mysql_fetch_assoc($answerresult);
-$questions = mysql_fetch_assoc($questions);
+$answerresult = mysqli_query($dbcon, "select id,answer from questions where questionpath='$questionpath'");
+$questions = mysqli_query($dbcon, "select tym, round1, solvedquestions, current from profile where username='$username'");
+$dbanswer = mysqli_fetch_assoc($answerresult);
+$questions = mysqli_fetch_assoc($questions);
 $solvedquestions = explode(',', $questions['solvedquestions']);
 
 foreach($solvedquestions as $solvedquestion) {
@@ -60,7 +60,7 @@ if($useranswer=="") {
 		date_default_timezone_set("Asia/Kolkata"); 
 		$tym=time()+12600;;
 		// update query
-		//mysql_query("update profile set solvedquestions='$insertSolved',current='$insertCurrent',round1=$currentScore,tym='$tym',hint=1 where username='$username'");
+		//mysqli_query($dbcon, "update profile set solvedquestions='$insertSolved',current='$insertCurrent',round1=$currentScore,tym='$tym',hint=1 where username='$username'");
 		echo "true";
 	} else {
 		echo "Sorry! Wrong Key. Please try again.";

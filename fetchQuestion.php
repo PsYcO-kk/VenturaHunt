@@ -7,11 +7,11 @@
 	$question = $_POST['question'];
 	$question = (substr($question, 1));
 
-	$questionResult = mysql_query("select id, questionpath from questions where id=$question");
-	$questionpath = mysql_fetch_assoc($questionResult);
+	$questionResult = mysqli_query($dbcon, "select id, questionpath from questions where id=$question");
+	$questionpath = mysqli_fetch_assoc($questionResult);
 
-	$questions = mysql_query("select solvedquestions, current from profile where username='$username'");
-	$questions = mysql_fetch_assoc($questions);
+	$questions = mysqli_query($dbcon, "select solvedquestions, current from profile where username='$username'");
+	$questions = mysqli_fetch_assoc($questions);
 	$solvedquestions = explode(',', $questions['solvedquestions']);
 
 	foreach($solvedquestions as $solvedquestion) {

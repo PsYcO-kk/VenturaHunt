@@ -6,11 +6,11 @@ $username = $_SESSION['username'];
 //echo $username;
 $questionPath = $_POST['questionpath'];
 //echo $questionPath;
-$usernameQuery = mysql_query("select round1, current, hint, solvedquestions,thint from profile where username='$username'");
-$questionQuery = mysql_query("select id, questionpath, hint1, hint2 from questions where questionPath='$questionPath'");
+$usernameQuery = mysqli_query($dbcon, "select round1, current, hint, solvedquestions,thint from profile where username='$username'");
+$questionQuery = mysqli_query($dbcon, "select id, questionpath, hint1, hint2 from questions where questionPath='$questionPath'");
 
-$usernameResult = mysql_fetch_assoc($usernameQuery);
-$questionResult = mysql_fetch_assoc($questionQuery);
+$usernameResult = mysqli_fetch_assoc($usernameQuery);
+$questionResult = mysqli_fetch_assoc($questionQuery);
 
 $solvedquestions = explode(',', $usernameResult['solvedquestions']);
 //echo $usernameResult['solvedquestions'];
@@ -48,7 +48,7 @@ $thint=$usernameResult['thint'];
 	//	$insertSolved = $usernameResult['solvedquestions'].",".$usernameResult['current'];
 	//	$insertCurrent = intval($usernameResult['current']);
 	//	$insertCurrent+=1;
-	//	mysql_query("update profile set solvedquestions='$insertSolved',current='$insertCurrent' where username='$username'");
+	//	mysqli_query($dbcon, "update profile set solvedquestions='$insertSolved',current='$insertCurrent' where username='$username'");
 	//	$valueHint=0;
 	}
 	$valueHint++;
@@ -56,7 +56,7 @@ $thint=$usernameResult['thint'];
 
 
 
-mysql_query("update profile set hint='$valueHint',round1=$points , thint=$thint where username='$username'");
+mysqli_query($dbcon, "update profile set hint='$valueHint',round1=$points , thint=$thint where username='$username'");
 }
 
 ?>

@@ -13,11 +13,11 @@ $username=$_GET['username'];
 $hash=$_GET['hash'];
 if(isset($_GET['username']) && !empty($_GET['username']) AND isset($_GET['hash']) && !empty($_GET['hash'])){
     // Verify data
-    $username = mysql_escape_string($_GET['username']); // Set email variable
-    $hash = mysql_escape_string($_GET['hash']); // Set hash variable
+    $username = mysqli_real_escape_string($dbcon, $_GET['username']); // Set email variable
+    $hash = mysqli_real_escape_string($dbcon, $_GET['hash']); // Set hash variable
                 
-    $search = mysql_query("SELECT * FROM login WHERE username='".$username."' AND hash='".$hash."' AND active='1'"); 
-    $match  = mysql_num_rows($search);
+    $search = mysqli_query($dbcon, "SELECT * FROM login WHERE username='".$username."' AND hash='".$hash."' AND active='1'"); 
+    $match  = mysqli_num_rows($search);
                  
     if($match > 0){
 		echo"<div>Successfully Verified ! Please enter your new password.</div>";
