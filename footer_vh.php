@@ -9,7 +9,6 @@
     <!--/Footer-->
 
 
-    <script src="assets/js/vendor/jquery-1.9.1.min.js"></script>
     <script src="assets/js/vendor/bootstrap.min.js"></script>
     <script src="assets/js/main.js"></script>
     <!-- Required javascript files for Slider -->

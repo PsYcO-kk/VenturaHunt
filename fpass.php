@@ -84,13 +84,13 @@
                                     Please verify your request by pressing the button below.<br/><br/>
                                 </p>
                                 <p style="font-family: \'Abel\', sans-serif;font-size:15px; border-radius:2px; background-color:#98FB98; margin-left:2%;margin-right:2%; padding-left:1.6%;">
-                                    <a href="http://venturahunt.000webhostapp.com/cpassword.php?username='.$username.'&hash='.$hash.'" style="margin-left:35%;  padding: 4px 10px;background: #6495ED; border: solid 1px #20538D; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);  text-decoration: none;color: #FFF; border-radius:4px;">Confirm Your Request</a><br/><br/>
+                                    <a href="https://venturahunt.000webhostapp.com/cpassword.php?username='.$username.'&hash='.$hash.'" style="margin-left:35%;  padding: 4px 10px;background: #6495ED; border: solid 1px #20538D; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);  text-decoration: none;color: #FFF; border-radius:4px;">Confirm Your Request</a><br/><br/>
                                 </p>
                                 <p style="font-family: \'Abel\', sans-serif;font-size:15px;  background-color:#98FB98; margin-left:2%;margin-right:2%; padding-left:1.6%;">
                                     Or, just open this link to change your password:<br/>
                                 </p>
                                 <p style="font-family: \'Abel\', sans-serif;font-size:15px;  background-color:#98FB98; margin-left:2%;margin-right:2%; padding-left:1.6%;">
-                                    http://venturahunt.000webhostapp.com/cpassword.php?username='.$username.'&hash='.$hash.'
+                                    https://venturahunt.000webhostapp.com/cpassword.php?username='.$username.'&hash='.$hash.'
                                 </p>
                                 <p style="padding-bottom:3px; font-family: \'Abel\', sans-serif;font-size:15px;  background-color:#98FB98;padding-left:1.6%; margin-left:2%;margin-right:2%;">
                                     <br/><br/>Regards,<br/>
@@ -144,6 +144,7 @@
     <link rel="stylesheet" href="assets/css/sl-slide.css">
     <link rel="stylesheet" href="assets/css/logo.css">
 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     <script> 
         function enableBtn(){
@@ -299,7 +300,7 @@
     <!--Header navbar-->
     <nav class="navbar navbar-inverse navbar-fixed-top  " >
 	    <div class="navbar-inner ">
-			<a class="navbar-brand  router-link-active" href="">
+			<a class="navbar-brand  router-link-active" href="index.php">
                 <div class="cd-logo header-footer-sprite"  style="height:90px; width:120px;">
                     <img src="images/logo.png" class="img-rounded img-responsive" style="margin-top:5px;width:120px;height:90px;"/>
                 </div>
@@ -508,7 +509,6 @@
     </div>
     <!--  /Notification -->
 
-    <script src="assets/js/vendor/jquery-1.9.1.min.js"></script>
     <script src="assets/js/vendor/bootstrap.min.js"></script>
     <script src="assets/js/main.js"></script>
 

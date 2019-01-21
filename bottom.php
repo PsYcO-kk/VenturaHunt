@@ -17,7 +17,7 @@
                     </li>
                     <li>
                         <i class="fa fa-globe"></i>
-                        <strong>Website: </strong> www.venturahunt.000webhostapp.com
+                        <strong>Website: </strong> venturahunt.000webhostapp.com
                     </li>
                 </ul>
             </div>
@@ -47,9 +47,6 @@
                         <li>Utkarsh Bairoliya</li>
                         <li>Abhishek Rawat</li>
                         <li>Akash Nirwan</li>
-                        <li>Bhargav Das</li>
-                        <li>Anshul Gupta</li>
-                        <li>Pyare Mahawar</li>
                     </ul>
                 </div>
                 <div class="span6">
@@ -123,39 +120,6 @@
                                 <div class="blur" style="width: 150px; height: 150px;"></div>
                                 <div class="caption-text " style="margin-left:-10px;">
                                     <h1>Akash Nirwan</h1>
-                                </div>
-                            </a>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="coordinatorsimages/bhargav.jpg" class="img-circle"style="height:110px;padding:20px; margin-right:10px; " />
-                        <div class="caption">
-                            <a href="https://www.facebook.com/bhargav.das.92" target="blank">
-                                <div class="blur" style="width: 150px; height: 150px;"></div>
-                                <div class="caption-text " style="margin-left:-10px;">
-                                    <h1>Bhargav Das</h1>
-                                </div>
-                            </a>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="coordinatorsimages/anshul.jpg" class="img-circle"style="height:110px;padding:20px; margin-right:10px; " />
-                        <div class="caption">
-                            <a href="https://www.facebook.com/guptaanshul299" target="blank">
-                                <div class="blur" style="width: 150px; height: 150px;"></div>
-                                <div class="caption-text " style="margin-left:-10px;">
-                                    <h1>Anshul Gupta</h1>
-                                </div>
-                            </a>
-                        </div>
-                    </li>
-                    <li>
-                        <img src="coordinatorsimages/pyare.jpg" class="img-circle"style="height:110px;padding:20px; margin-right:10px; " />
-                        <div class="caption">
-                            <a href="https://www.facebook.com/pyare.mahawar.5" target="blank">
-                                <div class="blur" style="width: 150px; height: 150px;"></div>
-                                <div class="caption-text " style="margin-left:-10px;">
-                                    <h1>Pyare Mahawar</h1>
                                 </div>
                             </a>
                         </div>

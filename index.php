@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap-responsive.min.css">
 
     <script src="https://use.fontawesome.com/759b0dfb0d.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
 
     <script>
@@ -70,8 +70,9 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="images/ico/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-  <!-- Custom Modernizr for Foundation -->
-    <script src="javascripts/foundation/modernizr.foundation.js"></script>
+
+    <!-- Custom Modernizr for Foundation -->
+    <!-- <script src="javascripts/foundation/modernizr.foundation.js"></script> -->
 
     <style type="text/css">
         .caption-style-1{
@@ -375,7 +376,7 @@
     <!--Header navbar-->
     <nav class="navbar navbar-inverse navbar-fixed-top "  >
 	    <div class="navbar-inner ">
-			<a class="navbar-brand  router-link-active" href="">
+			<a class="navbar-brand  router-link-active" href="index.php">
                 <div class="cd-logo header-footer-sprite" style="height:90px; width:120px;">
 					<img src="images/logo.png" class="img-rounded img-responsive" style="margin-top:5px;width:110px;height:90px;"/>
 				</div>
@@ -624,6 +625,8 @@
                                     <ul class="thumbnails">
                                         <li class="span3"><a target="blank" href="http://www.iitism.ac.in/"><img title="Indian Institute of Technology (ISM), Dhanbad" style="height:160px;width:160px;" src="images/sample/clients/client2.png"></a></li>
                                         <li class="span3"><a target="blank" href="https://www.facebook.com/SIAMISMpage/"><img title="SIAM IIT-ISM DHANBAD" style="height:160px;width:160px;" src="images/sample/clients/siam.png"></a></li>
+                                        <li class="span3"><a target="blank" href="https://www.facebook.com/theyellowchillidhanbad/"><img title="The Yellow Chilli" style="width:160px;margin:45px 0;" src="images/sample/clients/TYC_NEW_LOGO.png"></a></li>
+                                        <li class="span3"><a target="blank" href="https://www.facebook.com/hongkongdhanbadofficial/"><img title="Hong Kong" style="width:160px;margin:65px 0;" src="images/sample/clients/Hongkong-logo.png"></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -734,11 +737,10 @@
     </div>
     <!--  /Login form -->
 
-    <!-- <script src="assets/js/vendor/jquery-1.9.1.min.js"></script> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- <script src="assets/js/vendor/bootstrap.min.js"></script> -->
+
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
     <script src="assets/js/main.js"></script>
+
     <!-- Required javascript files for Slider -->
     <script src="assets/js/jquery.ba-cond.min.js"></script>
     <script src="assets/js/jquery.slitslider.js"></script>

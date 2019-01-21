@@ -41,6 +41,7 @@
 	<link rel="stylesheet" href="assets/css/logo.css">
 	<link rel="stylesheet" href="assets/css/material.css">
 	<link rel="stylesheet" href="assets/css/popup-contact.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 	<link rel="stylesheet" href="assets/css/TimeCircles.css">
  
