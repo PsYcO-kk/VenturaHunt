@@ -84,13 +84,13 @@
                                     Please verify your request by pressing the button below.<br/><br/>
                                 </p>
                                 <p style="font-family: \'Abel\', sans-serif;font-size:15px; border-radius:2px; background-color:#98FB98; margin-left:2%;margin-right:2%; padding-left:1.6%;">
-                                    <a href="http://www.venturahunt.000webhostapp.com/cpassword.php?username='.$username.'&hash='.$hash.'" style="margin-left:35%;  padding: 4px 10px;background: #6495ED; border: solid 1px #20538D; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);  text-decoration: none;color: #FFF; border-radius:4px;">Confirm Your Request</a><br/><br/>
+                                    <a href="http://venturahunt.000webhostapp.com/cpassword.php?username='.$username.'&hash='.$hash.'" style="margin-left:35%;  padding: 4px 10px;background: #6495ED; border: solid 1px #20538D; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);  text-decoration: none;color: #FFF; border-radius:4px;">Confirm Your Request</a><br/><br/>
                                 </p>
                                 <p style="font-family: \'Abel\', sans-serif;font-size:15px;  background-color:#98FB98; margin-left:2%;margin-right:2%; padding-left:1.6%;">
                                     Or, just open this link to change your password:<br/>
                                 </p>
                                 <p style="font-family: \'Abel\', sans-serif;font-size:15px;  background-color:#98FB98; margin-left:2%;margin-right:2%; padding-left:1.6%;">
-                                    http://www.venturahunt.000webhostapp.com/cpassword.php?username='.$username.'&hash='.$hash.'
+                                    http://venturahunt.000webhostapp.com/cpassword.php?username='.$username.'&hash='.$hash.'
                                 </p>
                                 <p style="padding-bottom:3px; font-family: \'Abel\', sans-serif;font-size:15px;  background-color:#98FB98;padding-left:1.6%; margin-left:2%;margin-right:2%;">
                                     <br/><br/>Regards,<br/>

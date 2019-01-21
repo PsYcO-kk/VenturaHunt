@@ -1,17 +1,6 @@
 <?php
 
     include('config.php');
-    try{
-        session_start();
-    }
-    catch(Exception $e)
-    {
-        
-    }
-
-    if (!isset($_SESSION['username'])) {
-        header("location: index.php");
-    }
 
     if(isset($_GET['username']) && !empty($_GET['username']) AND isset($_GET['hash']) && !empty($_GET['hash'])){
         // Verify data
