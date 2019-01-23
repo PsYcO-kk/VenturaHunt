@@ -129,7 +129,7 @@
         if( !$error ) {
             $hash = md5( mt_rand() );
             $password = hash('sha256', $password); // password hashing using SHA256
-            $query1 = "INSERT INTO login(username,password,hash,active) VALUES('$username','$password','$hash','0')";
+            $query1 = "INSERT INTO login(username,password,hash,active) VALUES('$username','$password','$hash','1')";
             $query2 = "INSERT INTO profile(name,username,email,round1,mobileno,college,pic,solvedquestions,current,tym,hint) VALUES('$name','$username','$email','0','$mobileno','$college','0','0','1','0','1')";
             $res1 = mysqli_query($dbcon, $query1);
             $res2 = mysqli_query($dbcon, $query2);
@@ -184,7 +184,7 @@
                 
                 
                 
-                $errMSG = "Successfully registered, Please verify your email address by opening the URL send to your EMAIL ID. In case you doesn't find the email, please check your Spam Box.";
+                $errMSG = "Successfully registered. Your account will be automatically activated after verfication under 2 hours.";
                 
                 unset($username);
                 unset($email);

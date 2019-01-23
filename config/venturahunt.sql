@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 23, 2019 at 06:54 AM
+-- Generation Time: Jan 23, 2019 at 05:35 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.0.26
 
@@ -241,7 +241,55 @@ INSERT INTO `profile` (`id`, `name`, `username`, `email`, `round1`, `mobileno`, 
 (80, 'sahil seli', 'sgoldy', 'sahilseli7236@gmail.com', 0, '2147483647', 'IIT ISM DHANBAD', 0, 0, 1, 0, 1, 0),
 (81, 'Akshat Vaya', 'Akshat', 'akshatvaya1@gmail.com', 0, '2147483647', 'IIT ISM DHANBAD', 0, 0, 1, 0, 1, 0),
 (82, 'Huean Rathore', 'huean', 'hueanrathore343@gmail.com', 0, '2147483647', 'IIT ISM Dhanbad', 0, 0, 1, 0, 1, 0),
-(83, 'Hemant Kumar', 'heman me', 'hemnt007@gmail.com', 0, '2147483647', 'Indian Institute of Technology ISM DHANBAD', 0, 0, 1, 0, 1, 0);
+(83, 'Hemant Kumar', 'heman me', 'hemnt007@gmail.com', 0, '2147483647', 'Indian Institute of Technology ISM DHANBAD', 0, 0, 1, 0, 1, 0),
+(84, 'Akash Kulshrestha', 'Akash kul', 'akashkulshrestha7@gmail.com', 0, '9958457414', 'IIT ISM DHANBAD', 0, 0, 1, 0, 1, 0),
+(85, 'Hemant Kumar Marai', 'Hemant M', 'hemantmarai1412@gmail.com', 0, '8224095028', 'IIT ISM DHANBAD', 0, 0, 1, 0, 1, 0),
+(86, 'YASH GOENKA', 'YASH GOENKA', 'yashgoenka.sjc@gmail.com', 0, '8638545770', 'IIT ISM DHANBAD', 0, 0, 1, 0, 1, 0),
+(87, 'Himanshu Verma', 'Arthur', 'himanshuverma0099@gmail.com', 0, '7839243675', 'IIT ISM Dhanbad', 0, 0, 1, 0, 1, 0),
+(88, 'Mohammed Fazal A Khattal', 'Fazal', 'fazalkhattal@gmail.com', 0, '8451076826', 'IIT ISM Dhanbad', 0, 0, 1, 0, 1, 0),
+(89, 'Harish kumar ratre', 'harish ratre', 'hkratre4@gmail.com', 0, '6364837657', 'IIT ISM DHANBAD', 0, 0, 1, 0, 1, 0),
+(90, 'Himalay Gupta', 'Himalay', 'guptahimalay99@gmail.com', 0, '8294834302', 'IITISM DHANBAD', 0, 0, 1, 0, 1, 0),
+(91, 'Akash Sahu', 'Akash', 'akash076923@gmail.com', 0, '9835153014', 'Iit ism dhanbad', 0, 0, 1, 0, 1, 0),
+(92, 'Brajesh kanwar', 'Brajesh kanwar', 'brajeshkanwar000@gmail.com', 0, '7999484256', 'IIT ism Dhanbad', 0, 0, 1, 0, 1, 0),
+(93, 'Satyavart', 'Genos', 'satyavarty591@gmail.com', 0, '9801853516', 'Ism Dhanbad', 0, 0, 1, 0, 1, 0),
+(94, 'Sankalp', 'Sankalp', 'sankalp.18je0728@mech.iitism.ac.in', 0, '6209274655', 'IIT ISM Dhanbad', 0, 0, 1, 0, 1, 0),
+(95, 'Anuj kumar singh', 'Anuj', 'anujkkumarsingh@gmail.com', 0, '9457066608', 'Iit ism dhanbad', 0, 0, 1, 0, 1, 0),
+(96, 'Debjyoti Mondal', 'kittu', 'nick.kittu@live.in', 0, '8116671020', 'IIT Dhanbad', 0, 0, 1, 0, 1, 0),
+(97, 'Sourav Prasad', 'Souravpd', 'prasadsourav552@gmail.com', 0, '7209243590', 'IIT ism dhanbad', 0, 0, 1, 0, 1, 0),
+(98, 'BOT', 'BOT', 'xotid@utoo.email', 0, '1212121211', 'NEURON INSTITUTE OF TECHNOLOGY', 0, 0, 1, 0, 1, 0),
+(99, 'soumya prakash', 's soumya', 'ssoumyaprakash05@gmail.com', 0, '9784319046', 'IIT ISM', 0, 0, 1, 0, 1, 0),
+(100, 'Birjoy K Sonowal', 'Rhinobks', 'birjoykrishnan@gmail.com', 0, '9132207571', 'IIT ISM DHANBAD', 0, 0, 1, 0, 1, 0),
+(101, 'Birjoy K Sonowal', 'Rhinobks', 'birjoyks1509@gmail.com', 0, '7002086107', 'Indian Institute of Technology ISM Dhanbad', 0, 0, 1, 0, 1, 0),
+(102, 'Archisman Bhattacharjee', 'Spike Spiegel', 'ricardoarc007@gmail.com', 0, '9101036683', 'Indian Institute of Technology ISM Dhanbad', 0, 0, 1, 0, 1, 0),
+(103, 'Ayush Goutam', 'ayush goutam', 'ayush.goutam23@gmail.com', 0, '8962329469', 'ISM dhanbad', 0, 0, 1, 0, 1, 0),
+(104, 'Bharat Sharma', 'Jerry', 'bharatsharma744@yahoo.com', 0, '9811488583', 'IIT DHANBAD', 0, 0, 1, 0, 1, 0),
+(105, 'Akash Nirwan', 'Niraka', 'akashnirwan06@gmail.com', 0, '9431784376', 'IIT ISM Dhanbad', 0, 0, 1, 0, 1, 0),
+(106, 'Ankita Patel', 'Ankita Patel', 'ankitapatel23240@gmail.com', 0, '9929573169', 'Indian Institute of technology Ism dhanbad', 0, 0, 1, 0, 1, 0),
+(107, 'Manas Chaurasia', 'Manas', 'manasch4@gmail.com', 0, '9111787424', 'UIT RGPV', 0, 0, 1, 0, 1, 0),
+(108, 'dolamanee', 'Dolamanee Naik', 'dolamanee6122@gmail.com', 0, '6264701778', 'IIT ISM DHANBAD', 0, 0, 1, 0, 1, 0),
+(109, 'Popescu Mihai', 'MishuAnubis', 'mishu.arad@gmail.com', 0, '0723120014', 'Romania', 0, 0, 1, 0, 1, 0),
+(110, 'Sujatro Majumder', 'T Sujatro', 'msujatro@gmail.com', 0, '8777643349', 'Indian Institute of Technology Dhanbad', 0, 0, 1, 0, 1, 0),
+(111, 'Navneet Das', 'ImBunny', 'navv.16je002396@ee.ism.ac.in', 0, '8802151814', 'IIT ISM Dhanbad', 0, 0, 1, 0, 1, 0),
+(112, 'Gowreesh Mago', 'gkrm', 'gkrm2727.18je0317@am.iitism.ac.in', 0, '8847284255', 'IIT ISM Dhanbad', 0, 0, 1, 0, 1, 0),
+(113, 'Gowreesh Mago', 'alphaboi', 'stellaarora1412@gmail.com', 0, '6209274697', 'IIT ISM Dhanbad', 0, 0, 1, 0, 1, 0),
+(114, 'Guguloth Saikumar', 'Saikumar', 'gugulothsaikumar76@gmail.com', 0, '7993195390', 'IIT DHANBAD', 0, 0, 1, 0, 1, 0),
+(115, 'Uday chandra', 'Uday chandra', 'udaychandra6670@gmail.com', 0, '9177173468', 'Indian institute of technology ISM dhanbad', 0, 0, 1, 0, 1, 0),
+(116, 'FDDFFDF', 'DFFFFF', 'FFDFD@DFD.FD', 0, '3232323232', 'SDSDSSD', 0, 0, 1, 0, 1, 0),
+(117, 'Navneet Das', 'ImBunnny', 'techotech@outlook.com', 0, '8851059496', 'IIT ISM Dhanbad', 0, 0, 1, 0, 1, 0),
+(118, 'FDDFFDF', 'DFFFFF', 'profitmonger@rafmail.cf', 0, '323232312', 'SDSDSSD', 0, 0, 1, 0, 1, 0),
+(119, 'Ankit Kumar', 'sankyism', 'ankitiitism@gmail.com', 0, '7979938243', 'IIT ISM dhanbad', 0, 0, 1, 0, 1, 0),
+(120, 'dffd', 'dffd', 'profitmonger@2lyvui3rlbx9.ga', 0, '4545454545', 'cxccxcxxc', 0, 0, 1, 0, 1, 0),
+(121, 'Abhishek Jain', 'Abhishek Jain', 'abhi510j@gmail.com', 0, '7055157291', 'Indian Institute of Technology Dhanbad', 0, 0, 1, 0, 1, 0),
+(122, 'Harharjot Singh Pama', 'harharjot', 'harharjot.singh2312@gmail.com', 0, '7987115113', 'IIT ISM DHANBAD', 0, 0, 1, 0, 1, 0),
+(123, 'puneet mandil', 'devil ape', 'puneetmandil@gmail.com', 0, '6264209081', 'IIT BHU', 0, 0, 1, 0, 1, 0),
+(124, 'DHIRAV CHOUDHARY', 'Jai Mata Di', 'dhiravchoudhary@gmail.com', 0, '9836454032', 'Indian Institute of Technology Kharagpur', 0, 0, 1, 0, 1, 0),
+(125, 'DHIRAV CHOUDHARY', 'Jai Mata Di', 'dhiravchoudhary2151@gmail.com', 0, '8585853750', 'IIT Kharagpur', 0, 0, 1, 0, 1, 0),
+(126, 'Hardik', 'HARDik', 'hardikdhawan51767@gmail.com', 0, '9306533898', 'IIT ISM Dhanbad', 0, 0, 1, 0, 1, 0),
+(127, 'Nitesh Chandra dhusiya', 'Nitesh dhusiya', 'niteshchandra30@gmail.com', 0, '6377621130', 'IIT ISM DHANBAD', 0, 0, 1, 0, 1, 0),
+(128, 'Sourav kumar', 'The stranger', 'skostwal288@gmail.com', 0, '8949293061', 'Rajasthan technical university', 0, 0, 1, 0, 1, 0),
+(129, 'Siddharth Singh', 'FOURIERSmojito', 'sidhart185@gmail.com', 0, '7352693113', 'IIT Dhanbad', 0, 0, 1, 0, 1, 0),
+(130, 'Siddharth Singh', 'fouriersmojito', 'sid1851998@gmail.com', 0, '7702259236', 'IIT Dhanbad', 0, 0, 1, 0, 1, 0),
+(131, 'HARSH RAJ', 'harshraj', 'rajharsh334@gmail.com', 0, '7541856923', 'IIT ISM DHANBAD', 0, 0, 1, 0, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -293,7 +341,7 @@ ALTER TABLE `login`
 -- AUTO_INCREMENT for table `profile`
 --
 ALTER TABLE `profile`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=132;
 
 --
 -- AUTO_INCREMENT for table `questions`

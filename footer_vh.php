@@ -210,7 +210,7 @@
         document.title = "<?=$title;?>"
     </script>
 
-    <script id="dsq-count-scr" src="//venturahunt.disqus.com/count.js" async></script>
+    <script id="dsq-count-scr" src="//venturahunt-2.disqus.com/count.js" async></script>
     <script type="text/javascript">
         $(".dropdown .titl").click(function () {
             $(this).parent().toggleClass("closed");
