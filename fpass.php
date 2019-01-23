@@ -73,7 +73,7 @@
             $password = hash('sha256', $password); // password hashing using SHA256
             $sel=mysqli_query($dbcon, "select * from `profile` where `username`='$username' ");
             $arr=mysqli_fetch_array($sel);
-            if(($arr['email']==$email) && ($arr['mobileno']==$mobileno || $mobileno=='2147483647') && $arr['username']=$username){
+            if(($arr['email']==$email) && ($arr['mobileno']==$mobileno || $arr['mobileno']=='2147483647') && $arr['username']=$username){
                 $res1 = mysqli_query($dbcon, "update `login` set `password`='$password', `hash`='$hash' where `username`='$username'");
             }
     
