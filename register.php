@@ -155,13 +155,13 @@
                                     Your account has been created, please verify your account by pressing the button below.<br/><br/>
                                 </p>
                                 <p style="font-family: \'Abel\', sans-serif;font-size:15px; border-radius:2px; background-color:#98FB98; margin-left:2%;margin-right:2%; padding-left:1.6%;">
-                                    <a href="https://venturahunt.000webhostapp.com/verify.php?username='.$username.'&hash='.$hash.'" style="margin-left:35%;  padding: 4px 10px;background: #6495ED; border: solid 1px #20538D; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);  text-decoration: none;color: #FFF; border-radius:4px;">Confirm Your Account</a><br/><br/>
+                                    <a href="https://venturahunt.co.in/verify.php?username='.$username.'&hash='.$hash.'" style="margin-left:35%;  padding: 4px 10px;background: #6495ED; border: solid 1px #20538D; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);  text-decoration: none;color: #FFF; border-radius:4px;">Confirm Your Account</a><br/><br/>
                                 </p>
                                 <p style="font-family: \'Abel\', sans-serif;font-size:15px;  background-color:#98FB98; margin-left:2%;margin-right:2%; padding-left:1.6%;">
                                     Or, just open this link to activate your account:<br/>
                                 </p>
                                 <p style="font-family: \'Abel\', sans-serif;font-size:15px;  background-color:#98FB98; margin-left:2%;margin-right:2%; padding-left:1.6%;">
-                                    https://venturahunt.000webhostapp.com/verify.php?username='.$username.'&hash='.$hash.'  
+                                    https://venturahunt.co.in/verify.php?username='.$username.'&hash='.$hash.'  
                                 </p>
                                 <p style="padding-bottom:3px; font-family: \'Abel\', sans-serif;font-size:15px;  background-color:#98FB98;padding-left:1.6%; margin-left:2%;margin-right:2%;">
                                     <br/><br/>Regards,<br/>
@@ -177,7 +177,7 @@
                     </html>
                 '; // Our message above including the link
                                     
-                $headers = 'From:no-reply@venturahunt.com' . "\r\n"; // Set from headers
+                $headers = 'From:no-reply@venturahunt.co.in' . "\r\n"; // Set from headers
                 $headers .= "MIME-Version: 1.0\r\n";
                 $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
                 mail($to, $subject, $message, $headers); // Send our email
