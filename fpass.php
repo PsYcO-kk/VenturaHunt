@@ -71,10 +71,10 @@
         if( !$error ) { 
             $hash = md5( mt_rand() );
             $password = hash('sha256', $password); // password hashing using SHA256
-            $sel=mysqli_query($dbcon, "select * from profile where username='$username' ");
+            $sel=mysqli_query($dbcon, "select * from `profile` where `username`='$username' ");
             $arr=mysqli_fetch_array($sel);
             if(($arr['email']==$email) and $arr['mobileno']==$mobileno and $arr['username']=$username){
-                $res1 = mysqli_query($dbcon, "update login set password='$password' and hash='$hash' where username='$username'");
+                $res1 = mysqli_query($dbcon, "update `login` set `password`='$password', `hash`='$hash' where `username`='$username'");
             }
     
             if ($res1) {
