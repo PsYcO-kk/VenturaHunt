@@ -12,12 +12,8 @@
                         <i class="fa fa-home"></i><strong>Address:</strong> Indian Institute of Technology (ISM) Dhanbad<br>
                     </li>
                     <li>
-                        <i class="fa fa-envelope"></i>
-                        <strong>Email: </strong> support@venturahunt.com
-                    </li>
-                    <li>
                         <i class="fa fa-globe"></i>
-                        <strong>Website: </strong> venturahunt.000webhostapp.com
+                        <strong>Website: </strong> venturahunt.co.in
                     </li>
                 </ul>
             </div>
