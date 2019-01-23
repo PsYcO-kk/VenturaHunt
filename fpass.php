@@ -31,6 +31,10 @@
         $mobileno = strip_tags($mobileno);
         $mobileno = htmlspecialchars($mobileno);
   
+        $password = trim($_POST['password']);
+        $password = strip_tags($password);
+        $password = htmlspecialchars($password);
+
         // basic username validation
         if (empty($username)) {
             $error = true;
@@ -53,6 +57,15 @@
             $error = true;
             $emailError = "Please enter valid email address.";
         } 
+
+        // password validation
+        if (empty($password)){
+            $error = true;
+            $passwordError = "Please enter password.";
+        } else if(strlen($password) < 6) {
+            $error = true;
+            $passwordError = "Password must have atleast 6 characters.";
+        }
    
         // if there's no error, continue to signup
         if( !$error ) { 
@@ -61,7 +74,7 @@
             $sel=mysqli_query($dbcon, "select * from profile where username='$username' ");
             $arr=mysqli_fetch_array($sel);
             if(($arr['email']==$email) and $arr['mobileno']==$mobileno and $arr['username']=$username){
-                $res1 = mysqli_query($dbcon, "update login set hash='$hash' where username='$username'");
+                $res1 = mysqli_query($dbcon, "update login set password='$password' and hash='$hash' where username='$username'");
             }
     
             if ($res1) {
@@ -111,7 +124,7 @@
                 $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
                 mail($to, $subject, $message, $headers); // Send our email
 	
-                $errMSG = "Your Password Change Request has been submitted Successfully, Please verify your request by opening the URL send to your EMAIL ID .";
+                $errMSG = "Your Password Change Request has been submitted successfully.";
 	
                 unset($username);
                 unset($email);
@@ -403,6 +416,25 @@
                             <span class="alert-box alert"><?php echo $mobilenoError ?></span>
                         <?php } ?>
                     </div>			 
+
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-key fa-2x"></i></span>
+                            <input type="password" name="password" class="form-control"  style="width:300px;" placeholder="Enter Password" id="password" maxlength="15" required />
+                        </div>
+                        <?php if(isset($passwordError))  { ?>
+                            <span class="alert-box alert"><?php echo $passwordError ?></span>
+                        <?php } ?>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-check fa-2x"></i></span>
+                            <input type="password"  class="form-control" style="width:300px;"placeholder="Re-Enter Password" maxlength="15" id="confirm_password" required />
+                        </div>
+                        <?php if(isset($passwordError))  { ?>
+                            <span class="alert-box alert"><?php echo $passwordError ?></span>
+                        <?php } ?>
+                    </div>
 			
                     <div style="margin-left:440px;" class="g-recaptcha " data-sitekey="6Le_O4kUAAAAABTjK6hxMYIk8wRCnCnAPXHsHgzQ" data-callback="enableBtn"></div> 
 
