@@ -31,8 +31,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `login` (
   `id` int(11) NOT NULL,
   `username` varchar(100) NOT NULL,
-  `password` varchar(300) NOT NULL,
-  `hash` varchar(300) NOT NULL,
+  `password` varchar(300) DEFAULT NULL,
+  `hash` varchar(300) DEFAULT NULL,
   `active` enum('0','1') NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
