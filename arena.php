@@ -69,7 +69,12 @@
 					<a href="#" style="cursor: url('http://www.rw-designer.com/cursor-extern.php?id=37321'),auto; " class="dropdown-toggle" data-toggle="dropdown"><h4>⚓ Level <span class="titl "> </span>  <i class="fa fa-angle-down"></i></h4></a>
 					<ul id="questionsShow" class="dropdown-menu pull-left well helix" style="overflow-y:scroll ; margin-top:30px;z-index:100;  height:466px;">
 						<?php while($row = mysqli_fetch_assoc($questions)) { $id = $row['id']; ?>
-							<li style="margin-bottom:-9px;"><a href="#" id="<?php echo 'question'.$id ?>" class="" ><img src="images/line-stop.png" style="display:inline-block;float:left; position: relative; background: transparent;opacity:0.7;margin-top:0px;padding:-10px;margin-bottom:px;margin-left:20px;"/><span class="round label pull-right " style="margin-right:20px; border-radius:2px; " id="questionSpan">#<?php echo $id ?></span></a></li>
+							<li style="margin-bottom:-9px;">
+								<a href="#" id="<?php echo 'question'.$id ?>" class="" >
+									<img src="images/line-stop.png" style="display:inline-block;float:left; position: relative; background: transparent;opacity:0.7;margin-top:0px;padding:-10px;margin-bottom:px;margin-left:20px;"/>
+									<span class="round label pull-right " style="margin-right:20px; border-radius:2px; " id="questionSpan">#<?php echo $id ?></span>
+								</a>
+							</li>
 						<?php } ?>
 					</ul>
 				</li>
@@ -118,7 +123,7 @@
 		<div class="twelve column">
 
 			<div class="row">
-				<p><span class="label alert center" style="margin-left: 2em;background-color:#f2dede;""><i class="icon-info-sign"></i>Each hint will lead you to a deduction of 50 points !</span><br/> <span class="title pull-right" style="padding :6px; background-color:rgb(111,111,111);">Hints left <?php echo $userscore['thint'] ?><span></p>
+				<p><span class="label alert center" style="margin-left: 2em;background-color:#f2dede;""><i class="icon-info-sign"></i>Each hint will lead you to a deduction of 50 points !</span><br/> <span id="hints-left" class="title pull-right" style="padding :6px; background-color:rgb(111,111,111);">Hints left <?php echo $userscore['thint'] ?><span></p>
 			</div>
 
 			<div id="searchBar" class="row">

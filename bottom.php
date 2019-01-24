@@ -13,7 +13,7 @@
                     </li>
                     <li>
                         <i class="fa fa-globe"></i>
-                        <strong>Website: </strong> venturahunt.co.in
+                        <strong>Website: </strong> <a href="https://venturahunt.co.in">https://venturahunt.co.in</a>
                     </li>
                 </ul>
             </div>
@@ -25,7 +25,6 @@
                 <div>
                     <ul class="arrow">
                         <li><a href="home.php">Home</a></li>
-                        <li><a href='javascript:fg_popup_form("fg_formContainer","fg_form_InnerContainer","fg_backgroundpopup");'>Support</a></li>
                         <li><a data-toggle="modal" href="#guideline">Guidelines</a></li>
                         <li><a data-toggle="modal" href="#notification">Notifications</a></li>
                         <li><a data-toggle="modal" href="#privacy">Privacy Policy</a></li>
@@ -38,7 +37,7 @@
             <div id="archives" class="span5 ">
                 <div class="span6">
                     <ul class="arrow">
-                        <h4><a data-toggle="modal" href="#coordinators1" style="color:white;">Coordinators</a></h4>
+                        <h4><a data-toggle="modal" href="#coordinators1">Coordinators</a></h4>
                         <li>Saket Gupta</li>
                         <li>Utkarsh Bairoliya</li>
                         <li>Abhishek Rawat</li>
@@ -47,11 +46,11 @@
                 </div>
                 <div class="span6">
                     <ul class="arrow">
-                        <h4><a data-toggle="modal" href="#coordinators" style="color:white;">Organizers</a></h4>
+                        <h4><a data-toggle="modal" href="#coordinators">Organizers</a></h4>
                         <li>Vikas Yadav</li>
                         <li>Prajjwal Mehta</li>
-                        <li>Mayank Kumar</li>
                         <li>Nitesh Bhoi</li>
+                        <li>Mayank Kumar</li>
                         <li>Kumar Kshitij</li> 
                     </ul>
                 </div>
@@ -165,18 +164,6 @@
                     </li>
                 
                     <li>
-                        <img src="coordinatorsimages/mayank.jpg" class="img-circle" style="height:120px;padding:20px;"/>
-                        <div class="caption">
-                            <a href="https://www.facebook.com/mayank2652" target="blank">
-                                <div class="blur"></div>
-                                <div class="caption-text center" style="margin-left:-10px;">
-                                    <h1>Mayank Kumar</h1>						
-                                </div>
-                            </a>
-                        </div>
-                    </li>
-        
-                    <li style="margin-left:60px;">
                         <img src="coordinatorsimages/nitesh.jpg" class="img-circle"  style="height:120px;padding:20px;"/>
                         <div class="caption">
                             <a href="https://www.facebook.com/nitesh.bhoi.735" target="blank">
@@ -187,8 +174,20 @@
                             </a>
                         </div>
                     </li>
-                    
-                    <li class="" style="margin-left:50px;; margin-right:auto;">
+
+                    <li style="margin-left:60px;">
+                        <img src="coordinatorsimages/mayank.jpg" class="img-circle" style="height:120px;padding:20px;"/>
+                        <div class="caption">
+                            <a href="https://www.facebook.com/mayank2652" target="blank">
+                                <div class="blur"></div>
+                                <div class="caption-text center" style="margin-left:-10px;">
+                                    <h1>Mayank Kumar</h1>						
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                            
+                    <li style="margin-left:50px; margin-right:auto;">
                         <img src="coordinatorsimages/kshitij.jpg" class="img-circle" style="height:120px; padding:20px;"/>
                         <div class="caption">
                             <a href="https://www.facebook.com/kumar.kshitij.52" target="blank">

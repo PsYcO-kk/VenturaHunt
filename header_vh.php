@@ -13,6 +13,8 @@
 	if (!isset($_SESSION['username'])) {
 		header("location: index.php");
 	}
+    $reqURI = end(explode('/', $_SERVER['REQUEST_URI']));
+
 	$username=$_SESSION['username'];
 
 	$result = mysqli_query($dbcon, "select * from login where username='$username'");
@@ -227,22 +229,11 @@
 				
                 <div class="nav-collapse collapse pull-right" style="font-family: 'Abel', sans-serif; font-size:15px;">
                     <ul class="nav" >
-                        <li class="active" style="padding:8px; font-weight:bold;" ><a href="index.php"> <i class="fa fa-home"></i></a></li>
+                        <li class="<?php if($reqURI == 'home.php') echo 'active'; ?>" style="padding:8px; font-weight:bold;" ><a href="index.php"> <i class="fa fa-home"></i></a></li>
 						<li  style="padding:8px; font-weight:bold;"><a data-toggle="modal" href="#notification"  id=""> <i class="fa fa-bell"></i></a></li>
+                        <!-- <li class="<?php #if($reqURI == 'leaderboard.php') echo 'active'; ?>" style="padding:8px; font-weight:bold;"><a href="leaderboard.php"> <i class="fa fa-bar-chart"></i></a></li> -->
                         <li  style="padding:8px; font-weight:bold;"><a href="#"> <i class="fa fa-bar-chart"></i></a></li>
-                        <li class="dropdown"  style="padding:8px; font-weight:;">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Help <i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="faq.php">FAQ</a></li>
-								<li class="divider"></li>
-								<li><a href="logout.php"><i class="icon-off"></i> Logout</a></li>
-								<li class="divider"></li>
-								<li><a href='javascript:fg_popup_form("fg_formContainer","fg_form_InnerContainer","fg_backgroundpopup");'>Contact Us</a></li>
-                                <li class="divider"></li>
-								<li><a data-toggle="modal" href="#guideline">Guidelines</a></li>
-                                <li><a data-toggle="modal" href="#privacy">Privacy Policy</a></li>
-                            </ul>
-                        </li>
+                        <li class="<?php if($reqURI == 'faq.php') echo 'active'; ?>" style="padding:8px; font-weight:bold;"><a href="faq.php">FAQ</a></li>
 						<li class="dropdown"    >
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" style="padding:17px;" aria-expanded="false">
 								<i class="fa fa-user" style="font-weight:bold; "></i>

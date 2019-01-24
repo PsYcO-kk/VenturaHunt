@@ -393,13 +393,13 @@
                 
                 <div class="nav-collapse collapse pull-right" style="font-family: 'Abel', sans-serif;font-size:15px; ">
                     <ul class="nav" >
-                        <li style="margin-top:10px;margin-left:-450px;color:white;"><a target="blank" href="http://www.iitism.ac.in/">Indian Institute of Technology Dhanbad <i><span style="font-family: 'Josefin Slab', serif;">Presents</span></i></a></li>
+                        <li style="margin-top:10px;margin-left:-375px;color:white;"><a target="blank" href="http://www.iitism.ac.in/">Indian Institute of Technology Dhanbad <i><span style="font-family: 'Josefin Slab', serif;">Presents</span></i></a></li>
                         
-                        <li class="<?php if($reqURI == '' || $reqURI == 'index.php') echo 'active'; ?>" style="padding:2px; font-weight:bold;"><a href="index.php"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-                        <li style="padding:2px; font-weight:bold;"><a data-toggle="modal" href="#notification"  ><i class="fa fa-bell" aria-hidden="true"></i></a></li>
-                        <li style="padding:2px; font-weight:bold;"><a data-toggle="modal" href="#guideline">Guidelines</a></li>
-                        <li class="<?php if($reqURI == 'register.php') echo 'active'; ?>" style="padding:2px; font-weight:bold;"><a href="register.php">Sign Up</a></li>
-                        <li class="login"  style="padding:2px; font-weight:bold;">
+                        <li class="<?php if($reqURI == '' || $reqURI == 'index.php') echo 'active'; ?>" style="padding:8px; font-weight:bold;"><a href="index.php"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+                        <li style="padding:8px; font-weight:bold;"><a data-toggle="modal" href="#notification"  ><i class="fa fa-bell" aria-hidden="true"></i></a></li>
+                        <li style="padding:8px; font-weight:bold;"><a data-toggle="modal" href="#guideline">Guidelines</a></li>
+                        <li class="<?php if($reqURI == 'register.php') echo 'active'; ?>" style="padding:8px; font-weight:bold;"><a href="register.php">Sign Up</a></li>
+                        <li class="login"  style="padding:8px; font-weight:bold;">
                             <a data-toggle="modal" href="#loginForm">Login</a>
                         </li>
                     </ul>        
@@ -491,7 +491,7 @@
     <section id="services">
         <div class="container">
             <div class="center gap">
-                <h3>What is VenturaHunt ?</h3>
+                <h3>What is VenturaHunt 2.0 ?</h3>
                 <p class="lead">An Online Treasure Hunt !</p>
             </div>
 
@@ -503,7 +503,7 @@
                         </div>
                         <div class="media-body">
                             <h4 class="media-heading">Introduction</h4>
-                            <p style="font-family: 'Josefin Slab', serif;; font-size:15px;">VenturaHunt is an online treasure hunt which you can be more precisely express as a cryptic hunt organised by SIAM (Society for Industrial and Applied Mathematics) IIT(ISM) Student Chapter.</p>
+                            <p style="font-family: 'Josefin Slab', serif;; font-size:15px;">VenturaHunt 2.0 is an online cryptic treasure hunt organised by SIAM(Society for Industrial and Applied Mathematics) Student Chapter IIT(ISM) Dhanbad. It might seem impenetrable at first, but with a little work it’s more like a mental treasure hunt. All you have to do is use your common sense to decipher the clues.</p>
                         </div>
                     </div>
                 </div>            
@@ -516,7 +516,7 @@
                         <div class="media-body">
                             <h4 class="media-heading">What actually will be happening?</h4>
                             <p style="font-family: 'Josefin Slab', serif;; font-size:15px;">
-                                Here, you will be on the lookout, brainstorming for clues and solving the riddles. It is a test of your problem solving skills, your comprehension and your patience. At last it will be a test of whether or not you have the UNAGI in you.
+                                VenturaHunt 2.0 is a 48-hour event taking you through a series of mind-bending puzzles, each step leading to the next.You'll be on a quest, putting heads together, searching for clues. The real idea is to check the divergence and creativity of your thinking, problem solving ability and patience. Participate to discover the Sherlok inside you!
                             </p>
                         </div>
                     </div>
@@ -530,8 +530,7 @@
                         <div class="media-body">
                             <h4 class="media-heading">What will I get?</h4>
                             <p style="font-family: 'Josefin Slab', serif;; font-size:15px;">
-                                Your thirst for mysteries and mind games shall be quenched as you connect all the dots of the riddles. Your logicality shall be put to test while you sit in your Mind Palace looking for answers. 
-                                Explore, dissect and win every level to reach to the top where the real mystery awaits and the Sherlock in you shall behold the glory. Hail Hydra!
+                                VenturaHunt is a place where your thirst for mystries and mind games sahll be quenched as you proceed in solving the riddles. Your logical and analytical thinkimg will be put to test while you rack your brains looking for answers. Explore, dissect and win every level to reach to the top where the real mystery awaits and the Sherlock in you shall behold the glory. Hail Hydra!
                             </p>
                         </div>
                     </div>
@@ -603,7 +602,7 @@
                             <a class="prev" href="#myCarousel" data-slide="prev"><i class="fa fa-angle-left fa-2x" ></i></a> <a class="next" href="#myCarousel" data-slide="next"><i class="fa fa-angle-right fa-2x"></i></a>
                         </div>
                     </div>
-                    <p><font color="#A9A9A9">"We must find time to STOP & THANK the people who make a difference in our lives."</font><br/></p><h6><i>-John F. Kennedy</i></h6>
+                    <p><font color="#888">"We must find time to STOP & THANK the people who make a difference in our lives."</font><br/></p><h6><i>-John F. Kennedy</i></h6>
                 </div>
 
                 <div class="span10">

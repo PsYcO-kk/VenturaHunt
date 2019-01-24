@@ -47,7 +47,7 @@
             $nameError = "Name must have atleat 3 characters.";
         } else if (!preg_match("/^[a-zA-Z ]+$/",$name)) {
             $error = true;
-            $nameError = "Name must contain alphabets and space.";
+            $nameError = "Name must contain alphabets and spaces.";
         }
 
         // basic username validation
@@ -56,10 +56,10 @@
             $usernameError = "Please enter your full name.";
         } else if (strlen($username) < 3) {
             $error = true;
-            $usernameError = "Name must have atleat 3 characters.";
-        } else if (!preg_match("/^[a-zA-Z ]+$/",$username)) {
+            $usernameError = "Username must have atleat 3 characters.";
+        } else if (!preg_match("/^[a-zA-Z0-9 ]+$/",$username)) {
             $error = true;
-            $usernameError = "Name must contain alphabets and space.";
+            $usernameError = "Username must contain alphabets, numbers and spaces.";
         } else {
             // check username exist or not
             $query = "SELECT username FROM login WHERE username='$username'";

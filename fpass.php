@@ -41,10 +41,10 @@
             $usernameError = "Please enter your full name.";
         } else if (strlen($username) < 3) {
             $error = true;
-            $usernameError = "Name must have atleat 3 characters.";
-        } else if (!preg_match("/^[a-zA-Z ]+$/",$username)) {
+            $usernameError = "Username must have atleat 3 characters.";
+        } else if (!preg_match("/^[a-zA-Z0-9 ]+$/",$username)) {
             $error = true;
-            $usernameError = "Name must contain alphabets and space.";
+            $usernameError = "Username must contain alphabets, numbers and space.";
         }
     
         //basic mob validation
@@ -411,7 +411,7 @@
                     <div class="form-group">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-key fa-2x"></i></span>
-                            <input type="password" name="password" class="form-control"  style="width:300px;" placeholder="Enter Password" id="password" maxlength="15" required />
+                            <input type="password" name="password" class="form-control"  style="width:300px;" placeholder="Enter New Password" id="password" maxlength="15" required />
                         </div>
                         <?php if(isset($passwordError))  { ?>
                             <span class="alert-box alert"><?php echo $passwordError ?></span>
