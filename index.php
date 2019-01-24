@@ -17,6 +17,7 @@
         unset($_SESSION['loginerror']);
         session_destroy();
     }
+    $reqURI = end(explode('/', $_SERVER['REQUEST_URI']));
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -393,23 +394,13 @@
                 <div class="nav-collapse collapse pull-right" style="font-family: 'Abel', sans-serif;font-size:15px; ">
                     <ul class="nav" >
                         <li style="margin-top:10px;margin-left:-450px;color:white;"><a target="blank" href="http://www.iitism.ac.in/">Indian Institute of Technology Dhanbad <i><span style="font-family: 'Josefin Slab', serif;">Presents</span></i></a></li>
-                        <li class="active" style="padding:2px; font-weight:bold;"><a href="index.php"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-                        <li  style="padding:2px; font-weight:bold;"><a data-toggle="modal" href="#notification"  ><i class="fa fa-bell" aria-hidden="true"></i></a></li>
-                        <li  style="padding:2px; font-weight:;"><a data-toggle="modal" href="#guideline">Guidelines</a></li>
-                        <li class="dropdown"  style="padding:2px; font-weight:;">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Help <i class="fa fa-angle-down"></i></a>
-                            <ul class="dropdown-menu">
-								<li><a data-toggle="modal" href="#loginForm">Login</a></li>
-                                <li><a href="register.php">Sign Up</a></li>
-								<li class="divider"></li>
-								<li><a href='javascript:fg_popup_form("fg_formContainer","fg_form_InnerContainer","fg_backgroundpopup");'>Contact Us</a></li>
-                                <li class="divider"></li>
-                                <li><a data-toggle="modal" href="#privacy">Privacy Policy</a></li>
-                             
-                            </ul>
-                        </li>
+                        
+                        <li class="<?php if($reqURI == '' || $reqURI == 'index.php') echo 'active'; ?>" style="padding:2px; font-weight:bold;"><a href="index.php"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+                        <li style="padding:2px; font-weight:bold;"><a data-toggle="modal" href="#notification"  ><i class="fa fa-bell" aria-hidden="true"></i></a></li>
+                        <li style="padding:2px; font-weight:bold;"><a data-toggle="modal" href="#guideline">Guidelines</a></li>
+                        <li class="<?php if($reqURI == 'register.php') echo 'active'; ?>" style="padding:2px; font-weight:bold;"><a href="register.php">Sign Up</a></li>
                         <li class="login"  style="padding:2px; font-weight:bold;">
-                            <a data-toggle="modal" href="#loginForm"><i class="fa fa-sign-in"></i></a>
+                            <a data-toggle="modal" href="#loginForm">Login</a>
                         </li>
                     </ul>        
                 </div><!--/.nav-collapse -->
