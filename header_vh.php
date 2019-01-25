@@ -232,7 +232,6 @@
                         <li class="<?php if($reqURI == 'home.php') echo 'active'; ?>" style="padding:8px; font-weight:bold;" ><a href="index.php"> <i class="fa fa-home"></i></a></li>
 						<li  style="padding:8px; font-weight:bold;"><a data-toggle="modal" href="#notification"  id=""> <i class="fa fa-bell"></i></a></li>
                         <li class="<?php if($reqURI == 'leaderboard.php') echo 'active'; ?>" style="padding:8px; font-weight:bold;"><a href="leaderboard.php"> <i class="fa fa-bar-chart"></i></a></li>
-                        <li  style="padding:8px; font-weight:bold;"><a href="#"> <i class="fa fa-bar-chart"></i></a></li>
                         <li class="<?php if($reqURI == 'faq.php') echo 'active'; ?>" style="padding:8px; font-weight:bold;"><a href="faq.php">FAQ</a></li>
 						<li class="dropdown"    >
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" style="padding:17px;" aria-expanded="false">
