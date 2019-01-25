@@ -169,7 +169,7 @@
 				<div class="nine column">
 					<ul class="search">
 						<form>
-							<input type="text" style="width: 250px;" disabled id="getHint" />
+							<input type="text" style="width: 500px;" disabled id="getHint" />
 						</form>
 					</ul>
 				</div>

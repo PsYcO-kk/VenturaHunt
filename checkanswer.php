@@ -32,8 +32,8 @@
 
 	if($useranswer=="") {
 		echo "Please Enter the Key .";
-	} else if(!preg_match('/^[a-z0-9]*$/', $useranswer)) {
-		echo "Answers must contain only characters, numbers and spaces.";
+	} else if(!preg_match('/^[a-z0-9&]*$/', $useranswer)) {
+		echo "Answers must contain only characters, numbers, spaces and special character '&'.";
 	} else if($flag==true) {
 		echo "You have already cleared this Level, Please move to level #".$questions['current']." <br/>";
 	} else if ($notSolved==true) {
