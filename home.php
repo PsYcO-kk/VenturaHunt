@@ -18,9 +18,8 @@
 
 <div class="fb-like" style="position:fixed;float:left;margin-left:0px;margin-top:80px;" data-href="https://www.facebook.com/venturahunt/" data-layout="box_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
 <br/><br/>
-<div id="count-down" data-date="2019-01-25 18:00:00" class="center  " style="height:100px;margin-left:35%; margin-right:25px;margin-top:-60px;">
-    <!-- <h6 style="margin-right:60%;">&nbsp;&nbsp;&nbsp;&nbsp;HUNT HAS BEGUN SINCE -</h6>                              -->
-    <h6 style="margin-right:60%;">&nbsp;&nbsp;&nbsp;&nbsp;HUNT BEGINS IN -</h6>                             
+<div id="count-down" data-date="2019-01-27 18:00:00" class="center  " style="height:100px;margin-left:35%; margin-right:25px;margin-top:-60px;">
+    <h6 style="margin-right:60%;">&nbsp;&nbsp;&nbsp;&nbsp;HUNT ENDS IN -</h6>                             
 </div><br/>
 <div class="wrap well" style=" height: 60vh;display: flex;">
     <main style=" flex: 1;display: flex; ">
@@ -84,8 +83,7 @@
 
 <div class="well center" >
     <br/><br/>
-    <!-- <a href="arena.php" style="color:white;"  > -->
-    <a style="color:white;"  >
+    <a href="arena.php" style="color:white;"  >
         <div id="div" style="border-radius:2px;" class="btn btn-large btn-success btn-raised">
             Play
         </div>

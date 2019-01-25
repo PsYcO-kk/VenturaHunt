@@ -26,12 +26,14 @@
 	$useranswer = strtolower($useranswer);
 	$useranswer = trim($useranswer);
 	$useranswer = str_replace(' ', '', $useranswer);
-	$databaseanswer = strtolower(trim($dbanswer['answer']));
+
+	// trim, specialchars and other check for validating the user answer
+	// here TODO
 
 	if($useranswer=="") {
 		echo "Please Enter the Key .";
-	} else if(!preg_match('/^[a-z0-9\s,]*$/', $useranswer)) {
-		echo "Special Characters are not allowed!";
+	} else if(!preg_match('/^[a-z0-9]*$/', $useranswer)) {
+		echo "Answers must contain only characters, numbers and spaces.";
 	} else if($flag==true) {
 		echo "You have already cleared this Level, Please move to level #".$questions['current']." <br/>";
 	} else if ($notSolved==true) {
@@ -40,8 +42,13 @@
 		// trim, specialchars and other check for validating the user answer
 		// here TODO
 		
+		$useranswer = hash('sha256', $useranswer);
+
+		$databaseanswer = strtolower($dbanswer['answer']);
+		$databaseanswer = explode('||', $databaseanswer);
+
 		$trueanswer = false;
-		if($databaseanswer===$useranswer) {
+		if(in_array($useranswer, $databaseanswer)) {
 			$trueanswer = true;
 		} else {
 			$trueanswer = false;

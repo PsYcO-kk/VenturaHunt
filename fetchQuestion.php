@@ -9,7 +9,7 @@
 	$question = $_POST['question'];
 	$question = (substr($question, 1));
 
-	$questionResult = mysqli_query($dbcon, "select id, questionpath from questions where id=$question");
+	$questionResult = mysqli_query($dbcon, "select id, questionpath, description from questions where id=$question");
 	$questionpath = mysqli_fetch_assoc($questionResult);
 
 	$questions = mysqli_query($dbcon, "select solvedquestions, current from profile where username='$username'");
@@ -28,12 +28,12 @@
 	}
 
 	if($flag==true) {
-		echo $questionpath['questionpath'];
+		echo $questionpath['description']."||".$questionpath['questionpath'];
 		
 	} else if($notSolved==true) {
-		echo "questionsimages/notauthorizedimage.png";
+		echo "||"."questionsimages/notauthorizedimage.png";
 	} else {
-		echo $questionpath['questionpath'];
+		echo $questionpath['description']."||".$questionpath['questionpath'];
 		
 	}
 

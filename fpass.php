@@ -38,13 +38,13 @@
         // basic username validation
         if (empty($username)) {
             $error = true;
-            $usernameError = "Please enter your full name.";
+            $usernameError = "Please enter your username.";
         } else if (strlen($username) < 3) {
             $error = true;
             $usernameError = "Username must have atleat 3 characters.";
-        } else if (!preg_match("/^[a-zA-Z0-9 ]+$/",$username)) {
+        } else if (!preg_match("/^[a-zA-Z0-9]+$/",$username)) {
             $error = true;
-            $usernameError = "Username must contain alphabets, numbers and space.";
+            $usernameError = "Username must only contain alphabets and numbers.";
         }
     
         //basic mob validation

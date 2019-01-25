@@ -5,7 +5,7 @@
 <!-- Leaderboard Page Contents -->
 <div class="" id="leaderboardContent">
     <div class="  "  >	
-        <div  style="overflow:scroll; height:500px; "  >
+        <div  style="overflow:scroll; height:500px; text-align: center;"  >
             <table class="span9 title  " >
                 <thead >
                     <tr class="" style="background-color:rgb(102,102,102);">
@@ -23,11 +23,11 @@
                     <?php while($row = mysqli_fetch_assoc($leaderboard)) { ?>
                         <tr>
                             <td><?php echo $i++; ?></td>
-                            <td><?php echo $row['name'] ?></td>
+                            <td><?php echo ucwords($row['name']) ?></td>
                             <td><?php echo $row['round1'] ?></td>
                             <td><?php echo date("F j, Y, g:i a", $row['tym']); ?></td>
                             <td><?php echo intval($row['current'])-1 ?></td>
-                            <td><?php echo $row['college'] ?></td>
+                            <td><?php echo strtoupper($row['college']) ?></td>
                         </tr>
                     <?php  } ?>
                 </tbody>

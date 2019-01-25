@@ -47,19 +47,19 @@
             $nameError = "Name must have atleat 3 characters.";
         } else if (!preg_match("/^[a-zA-Z ]+$/",$name)) {
             $error = true;
-            $nameError = "Name must contain alphabets and spaces.";
+            $nameError = "Name must only contain alphabets and spaces.";
         }
 
         // basic username validation
         if (empty($username)) {
             $error = true;
-            $usernameError = "Please enter your full name.";
+            $usernameError = "Please enter your username.";
         } else if (strlen($username) < 3) {
             $error = true;
             $usernameError = "Username must have atleat 3 characters.";
-        } else if (!preg_match("/^[a-zA-Z0-9 ]+$/",$username)) {
+        } else if (!preg_match("/^[a-zA-Z0-9]+$/",$username)) {
             $error = true;
-            $usernameError = "Username must contain alphabets, numbers and spaces.";
+            $usernameError = "Username must only contain alphabets and numbers";
         } else {
             // check username exist or not
             $query = "SELECT username FROM login WHERE username='$username'";
@@ -80,7 +80,7 @@
             $collegenameError = "College Name must have atleat 3 characters.";
         } else if (!preg_match("/^[a-zA-Z ]+$/",$college)) {
             $error = true;
-            $collegenameError = "College Name must contain alphabets and space.";
+            $collegenameError = "College Name must only contain alphabets and space.";
         }
     
         

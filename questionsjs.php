@@ -26,10 +26,21 @@
                 var ques = '$question';
                 var question = $('$question span').html();
                 $.post('fetchQuestion.php', {'question':question}, function(data) {
-                    $('#questionPic').attr('src', data);
+                    desc = data.split('||')[0];
+                    src = data.split('||')[1];
+                    $('#questionPic').attr('src', src);
+                    $('#questionDesc').html(desc);
                     parseClass(ques);
                 });
-                $('#getHint').val('');
+                $.post('fetchHint.php', {'question':question}, function(data) {
+                    $('#getHint').val(data);
+                });
+
+                $('.levelButton').removeClass('active')
+                if(!$(this).hasClass('solved')){
+                    $(this).addClass('active');
+                }
+
                 $('#answertext').val('');
         });\n\n";
         $i++;

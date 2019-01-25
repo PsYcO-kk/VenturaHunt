@@ -127,6 +127,12 @@
                         $("#answercorrectlabel").css("color","#428bca");
                         $("#answercorrectlabel").css("font-size","16px");
                         $("#changecolor").css("background-color","#5bc0de");
+
+                        $('.levelButton').each(function(){
+                            if($(this).hasClass('active')) {
+                                $(this).removeClass('active').addClass('solved');
+                            } 
+                        });
                     } else {
                         $("#answercorrectlabel").removeClass("success");
                 
@@ -137,7 +143,7 @@
                         $("#answercorrectlabel").css("color","#E65100");
                     }
                     $('#answertext').val('');
-                    $('#getHint').val('');
+                    // $('#getHint').val('');
                 });
             });
 
@@ -146,6 +152,9 @@
                 //alert(questionpath);
                 $.post('checkHint.php', {'questionpath': questionpath}, function(data) {
                     $("#getHint").val(data);
+                    $.get('checkHintsLeft.php', function(data) {
+                        $('#hints-left').html('Hints left '+data);
+                    });
                 });
             });
 

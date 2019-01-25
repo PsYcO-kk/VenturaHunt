@@ -33,9 +33,8 @@
 	<div style="margin-left:94%;">
 		<div class="fb-like pull-right" style="position:fixed;float:right;margin-left:31px;margin-top:80px;z-index:1;" data-href="https://www.facebook.com/venturahunt/" data-layout="box_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
 	</div>
-	<div id="count-down" data-date="2019-01-25 18:00:00" class="pull-right col-4 " style="height:100px; margin-right:25px;margin-top:-60px;">
-		<!-- <h6 style="margin-right:300px;float:center;">&nbsp;&nbsp;&nbsp;&nbsp;HUNT WILL END IN -</h6>                              -->
-		<h6 style="margin-right:300px;float:center;">&nbsp;&nbsp;&nbsp;&nbsp;HUNT BEGINS IN -</h6>                             
+	<div id="count-down" data-date="2019-01-27 18:00:00" class="pull-right col-4 " style="height:100px; margin-right:25px;margin-top:-60px;">
+		<h6 style="margin-right:300px;float:center;">&nbsp;&nbsp;&nbsp;&nbsp;HUNT ENDS IN -</h6>                             
 	</div>
 </div>
 
@@ -58,7 +57,28 @@
 
 	#questionsShow li img:hover {
 		-webkit-filter: hue-rotate(180deg); filter: hue-rotate(180deg);
-	}	
+	}
+
+	.levelButton {
+		display: block;
+		padding: 10px 20px;
+		background-color: #dc5e67;
+		font-size: 20px;
+		margin: 5px;
+		text-align: center;
+	}
+
+	.levelButton:hover {
+		background-color: #9e9e9e;
+	}
+
+	.levelButton.solved {
+		background-color: #2dcc70;
+	}
+
+	.levelButton.active {
+		background-color: #9e9e9e;
+	}
 </style>
 
 <div id="questionBar" class="row center well">
@@ -66,17 +86,27 @@
 		<section id="content">
 			<ul style="list-style: none;">
 				<li class="dropdown list-group"  style="padding:8px; font-weight:bold; ">
-					<a href="#" style="cursor: url('http://www.rw-designer.com/cursor-extern.php?id=37321'),auto; " class="dropdown-toggle" data-toggle="dropdown"><h4>⚓ Level <span class="titl "> </span>  <i class="fa fa-angle-down"></i></h4></a>
-					<ul id="questionsShow" class="dropdown-menu pull-left well helix" style="overflow-y:scroll ; margin-top:30px;z-index:100;  height:466px;">
+					<!-- <a href="#" style="cursor: url('http://www.rw-designer.com/cursor-extern.php?id=37321'),auto; " class="dropdown-toggle" data-toggle="dropdown"><h4>⚓ Level <span class="titl "> </span>  <i class="fa fa-angle-down"></i></h4></a> -->
+					<h4>⚓ Levels <span class="titl "> </span>  <i class="fa fa-angle-down"></i></h4>
+
+					<div style="display:flex; overflow-x: auto; padding: 5px; margin: 0 50px;">
 						<?php while($row = mysqli_fetch_assoc($questions)) { $id = $row['id']; ?>
+							<a href="#" id="<?php echo 'question'.$id ?>" class="levelButton <?php if(in_array($id, explode(',', $userscore['solvedquestions']))) echo 'solved'; ?>" >
+								<span class="label" style="border-radius:2px;" id="questionSpan">#<?php echo $id ?></span>
+							</a>
+						<?php } ?>
+					</div>
+
+					<!-- <ul id="questionsShow" class="dropdown-menu pull-left well helix" style="overflow-y:scroll ; margin-top:30px;z-index:100;  height:466px;">
+						<?php #while($row = mysqli_fetch_assoc($questions)) { $id = $row['id']; ?>
 							<li style="margin-bottom:-9px;">
-								<a href="#" id="<?php echo 'question'.$id ?>" class="" >
+								<a href="#" id="<?php #echo 'question'.$id ?>" class="" >
 									<img src="images/line-stop.png" style="display:inline-block;float:left; position: relative; background: transparent;opacity:0.7;margin-top:0px;padding:-10px;margin-bottom:px;margin-left:20px;"/>
 									<span class="round label pull-right " style="margin-right:20px; border-radius:2px; " id="questionSpan">#<?php echo $id ?></span>
 								</a>
 							</li>
-						<?php } ?>
-					</ul>
+						<?php #} ?>
+					</ul> -->
 				</li>
 			</ul>
 		</section>
@@ -87,7 +117,12 @@
 
 <div id="mainContent" class="row " >
 	<div class="row twelve column title center " id ="changecolor" style="width:70%; margin-left:auto;margin-right:auto; border-radius:6px;">
-		<center><a class="th "><img src="images/welcome.jpg" class="img-rounded" style="width: 700px; height: 300px; margin-top:35px;"  id="questionPic" /></a></center>
+		<center>
+			<a class="th ">
+				<img src="images/welcome.jpg" class="img-rounded" style="height: 500px; margin-top:35px;"  id="questionPic" />
+				<!-- <img src="images/welcome.jpg" class="img-rounded" style="width: 700px; height: 300px; margin-top:35px;"  id="questionPic" /> -->
+			</a>
+		</center>
 		<div style="height: 3em"></div>
 	</div>
 	<div style="height: 1em"></div>
@@ -95,6 +130,10 @@
 		<div class="six column centered">
 			<center><p><span id="answercorrectlabel" ></span></p></center>
 		</div>	
+	</div>
+
+	<div>
+		<h3 id="questionDesc" style="text-align: center;"></h3>
 	</div>
 
 	<div class="row center well">
@@ -146,10 +185,13 @@
 	</div><!-- Contents div -->
 </div>
 
-<div style="height: 1em"></div>
+<div style="height: 3em"></div>
+<div style="text-align: center;">
+	<img style="height: 350px;" src="images/sample/clients/yellow-chilli-ad.jpeg" class="img-fluid" />
+</div>
+<div style="height: 3em"></div>
 
 <div class="center well" style="width:70%;margin-left:auto;margin-right:auto; border-left:2px;">
-
 	<div id="disqus_thread"  style="overflow-y: scroll; height:500px;"></div>
 
 	<script>
