@@ -41,7 +41,19 @@
 	} else {
 		// trim, specialchars and other check for validating the user answer
 		// here TODO
-		
+
+		$rowQuery = mysqli_query($dbcon, "select * from answers where username='$username'");
+		$rowResult = mysqli_fetch_assoc($rowQuery);
+
+		if($rowResult){
+			$answer = $rowResult['attempted_answers'].$questions['current'].'-'.$useranswer.'||';
+			$updateQuery = mysqli_query($dbcon, "update answers set attempted_answers='$answer' where username='$username'");
+		}
+		else {
+			$answer = $questions['current'].'-'.$useranswer.'||';
+			$insertQuery = mysqli_query($dbcon, "insert into answers (username, attempted_answers) values ('$username', '$answer')");
+		}
+			
 		$useranswer = hash('sha256', $useranswer);
 
 		$databaseanswer = strtolower($dbanswer['answer']);

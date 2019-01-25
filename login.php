@@ -22,7 +22,7 @@
         $error = true;
         $usernameError = "Username must have atleat 3 characters.";
     } 
-    if (!preg_match("/^[a-zA-Z0-9]+$/",$username)) {
+    if (!preg_match("/^[a-zA-Z0-9 ]+$/",$username)) {
         $error = true;
         $usernameError = "Username must contain alphabets and numbers.";
     } 

@@ -42,7 +42,7 @@
         } else if (strlen($username) < 3) {
             $error = true;
             $usernameError = "Username must have atleat 3 characters.";
-        } else if (!preg_match("/^[a-zA-Z0-9]+$/",$username)) {
+        } else if (!preg_match("/^[a-zA-Z0-9 ]+$/",$username)) {
             $error = true;
             $usernameError = "Username must only contain alphabets and numbers.";
         }
