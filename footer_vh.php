@@ -124,7 +124,7 @@
                         $("#answercorrectlabel").html("Congratulations Key Accepted! Now you can move to next level.");
                         $("#answercorrectlabel").removeClass("alert");
                         $("#answercorrectlabel").css("background-color","#5bc0de");
-                        $("#answercorrectlabel").css("color","#428bca");
+                        $("#answercorrectlabel").css("color","#000000");
                         $("#answercorrectlabel").css("font-size","16px");
                         $("#changecolor").css("background-color","#5bc0de");
 
@@ -140,7 +140,7 @@
                         $("#answercorrectlabel").css("font-size","16px");
                         $("#changecolor").css("background-color","#E65100");
                         $("#answercorrectlabel").css("background-color","#f2dede");
-                        $("#answercorrectlabel").css("color","#E65100");
+                        $("#answercorrectlabel").css("color","#000000");
                     }
                     $('#answertext').val('');
                     // $('#getHint').val('');

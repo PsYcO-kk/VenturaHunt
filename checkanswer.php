@@ -74,6 +74,7 @@
 			$currentScore = $questions['round1'];
 			//echo $currentScore;
 			$currentScore += 100;
+			if($questions['current'] >= 14) $currentScore += 100;
 			$tym=$dbanswer['tym'];
 			date_default_timezone_set("Asia/Kolkata"); 
 			$tym=time()+12600;;

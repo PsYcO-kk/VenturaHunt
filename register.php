@@ -11,193 +11,192 @@
 
     $error = false;
 
-    if ( isset($_POST['btn-signup']) ) {
-    
+    // if ( isset($_POST['btn-signup']) ) {
+        
         // clean user inputs to prevent sql injections
-        $name = trim($_POST['name']);
-        $name = strip_tags($name);
-        $name = htmlspecialchars($name);
+        // $name = trim($_POST['name']);
+        // $name = strip_tags($name);
+        // $name = htmlspecialchars($name);
         
-        $username = trim($_POST['username']);
-        $username = strip_tags($username);
-        $username = htmlspecialchars($username);
+        // $username = trim($_POST['username']);
+        // $username = strip_tags($username);
+        // $username = htmlspecialchars($username);
         
-        $email = trim($_POST['email']);
-        $email = strip_tags($email);
-        $email = htmlspecialchars($email);
+        // $email = trim($_POST['email']);
+        // $email = strip_tags($email);
+        // $email = htmlspecialchars($email);
         
-        $mobileno = trim($_POST['mobileno']);
-        $mobileno = strip_tags($mobileno);
-        $mobileno = htmlspecialchars($mobileno);
+        // $mobileno = trim($_POST['mobileno']);
+        // $mobileno = strip_tags($mobileno);
+        // $mobileno = htmlspecialchars($mobileno);
         
-        $college = trim($_POST['college']);
-        $college = strip_tags($college);
-        $college = htmlspecialchars($college);
+        // $college = trim($_POST['college']);
+        // $college = strip_tags($college);
+        // $college = htmlspecialchars($college);
         
-        $password = trim($_POST['password']);
-        $password = strip_tags($password);
-        $password = htmlspecialchars($password);
+        // $password = trim($_POST['password']);
+        // $password = strip_tags($password);
+        // $password = htmlspecialchars($password);
     
         // basic name validation
-        if (empty($name)) {
-            $error = true;
-            $nameError = "Please enter your full name.";
-        } else if (strlen($name) < 3) {
-            $error = true;
-            $nameError = "Name must have atleat 3 characters.";
-        } else if (!preg_match("/^[a-zA-Z ]+$/",$name)) {
-            $error = true;
-            $nameError = "Name must only contain alphabets and spaces.";
-        }
+        // if (empty($name)) {
+        //     $error = true;
+        //     $nameError = "Please enter your full name.";
+        // } else if (strlen($name) < 3) {
+        //     $error = true;
+        //     $nameError = "Name must have atleat 3 characters.";
+        // } else if (!preg_match("/^[a-zA-Z ]+$/",$name)) {
+        //     $error = true;
+        //     $nameError = "Name must only contain alphabets and spaces.";
+        // }
 
         // basic username validation
-        if (empty($username)) {
-            $error = true;
-            $usernameError = "Please enter your username.";
-        } else if (strlen($username) < 3) {
-            $error = true;
-            $usernameError = "Username must have atleat 3 characters.";
-        } else if (!preg_match("/^[a-zA-Z0-9]+$/",$username)) {
-            $error = true;
-            $usernameError = "Username must only contain alphabets and numbers";
-        } else {
-            // check username exist or not
-            $query = "SELECT username FROM login WHERE username='$username'";
-            $result = mysqli_query($dbcon, $query);
-            $count = mysqli_num_rows($result);
-            if($count!=0){
-                $error = true;
-                $emailError = "Provided Username is already in use, Please try some other Username.";
-            }
-        }
+        // if (empty($username)) {
+        //     $error = true;
+        //     $usernameError = "Please enter your username.";
+        // } else if (strlen($username) < 3) {
+        //     $error = true;
+        //     $usernameError = "Username must have atleat 3 characters.";
+        // } else if (!preg_match("/^[a-zA-Z0-9]+$/",$username)) {
+        //     $error = true;
+        //     $usernameError = "Username must only contain alphabets and numbers";
+        // } else {
+        //     // check username exist or not
+        //     $query = "SELECT username FROM login WHERE username='$username'";
+        //     $result = mysqli_query($dbcon, $query);
+        //     $count = mysqli_num_rows($result);
+        //     if($count!=0){
+        //         $error = true;
+        //         $emailError = "Provided Username is already in use, Please try some other Username.";
+        //     }
+        // }
     
         // basic college name validation
-        if (empty($college)) {
-            $error = true;
-            $collegenameError = "Please enter your College name.";
-        } else if (strlen($college) < 3) {
-            $error = true;
-            $collegenameError = "College Name must have atleat 3 characters.";
-        } else if (!preg_match("/^[a-zA-Z ]+$/",$college)) {
-            $error = true;
-            $collegenameError = "College Name must only contain alphabets and space.";
-        }
+        // if (empty($college)) {
+        //     $error = true;
+        //     $collegenameError = "Please enter your College name.";
+        // } else if (strlen($college) < 3) {
+        //     $error = true;
+        //     $collegenameError = "College Name must have atleat 3 characters.";
+        // } else if (!preg_match("/^[a-zA-Z ]+$/",$college)) {
+        //     $error = true;
+        //     $collegenameError = "College Name must only contain alphabets and space.";
+        // }
     
         
         //basic mob validation
-        if(!preg_match("/^[0-9]*$/", $mobileno)) {
-            $mobilenoError="Please enter a valid number";
-        } else {
-            // check mobileno exist or not
-            $query = "SELECT mobileno FROM profile WHERE mobileno='$mobileno'";
-            $result = mysqli_query($dbcon, $query);
-            $count = mysqli_num_rows($result);
-            if($count!=0){
-                $error = true;
-                $mobilenoError = "Provided Mobile Number is already in use.";
-            }
-        }
+        // if(!preg_match("/^[0-9]*$/", $mobileno)) {
+        //     $mobilenoError="Please enter a valid number";
+        // } else {
+        //     // check mobileno exist or not
+        //     $query = "SELECT mobileno FROM profile WHERE mobileno='$mobileno'";
+        //     $result = mysqli_query($dbcon, $query);
+        //     $count = mysqli_num_rows($result);
+        //     if($count!=0){
+        //         $error = true;
+        //         $mobilenoError = "Provided Mobile Number is already in use.";
+        //     }
+        // }
     
     
     
         //basic email validation
-        if ( !filter_var($email,FILTER_VALIDATE_EMAIL) ) {
-            $error = true;
-            $emailError = "Please enter valid email address.";
-        } else {
-            // check email exist or not
-            $query = "SELECT email FROM profile WHERE email='$email'";
-            $result = mysqli_query($dbcon, $query);
-            $count = mysqli_num_rows($result);
-            if($count!=0){
-                $error = true;
-                $emailError = "Provided Email is already in use.";
-            }
-        }
+        // if ( !filter_var($email,FILTER_VALIDATE_EMAIL) ) {
+        //     $error = true;
+        //     $emailError = "Please enter valid email address.";
+        // } else {
+        //     // check email exist or not
+        //     $query = "SELECT email FROM profile WHERE email='$email'";
+        //     $result = mysqli_query($dbcon, $query);
+        //     $count = mysqli_num_rows($result);
+        //     if($count!=0){
+        //         $error = true;
+        //         $emailError = "Provided Email is already in use.";
+        //     }
+        // }
         // password validation
-        if (empty($password)){
-            $error = true;
-            $passwordError = "Please enter password.";
-        } else if(strlen($password) < 6) {
-            $error = true;
-            $passwordError = "Password must have atleast 6 characters.";
-        }
+        // if (empty($password)){
+        //     $error = true;
+        //     $passwordError = "Please enter password.";
+        // } else if(strlen($password) < 6) {
+        //     $error = true;
+        //     $passwordError = "Password must have atleast 6 characters.";
+        // }
     
     
     
         // if there's no error, continue to signup
-        if( !$error ) {
-            $hash = md5( mt_rand() );
-            $password = hash('sha256', $password); // password hashing using SHA256
-            $query1 = "INSERT INTO login(username,password,hash,active) VALUES('$username','$password','$hash','1')";
-            $query2 = "INSERT INTO profile(name,username,email,round1,mobileno,college,pic,solvedquestions,current,tym,hint) VALUES('$name','$username','$email','0','$mobileno','$college','0','0','1','0','1')";
-            $res1 = mysqli_query($dbcon, $query1);
-            $res2 = mysqli_query($dbcon, $query2);
+        // if( !$error ) {
+        //     $hash = md5( mt_rand() );
+        //     $password = hash('sha256', $password); // password hashing using SHA256
+        //     $query1 = "INSERT INTO login(username,password,hash,active) VALUES('$username','$password','$hash','1')";
+        //     $query2 = "INSERT INTO profile(name,username,email,round1,mobileno,college,pic,solvedquestions,current,tym,hint) VALUES('$name','$username','$email','0','$mobileno','$college','0','0','1','0','1')";
+        //     $res1 = mysqli_query($dbcon, $query1);
+        //     $res2 = mysqli_query($dbcon, $query2);
                 
-            if ($res1 && $res2) {
-                $errTyp = "success";
+        //     if ($res1 && $res2) {
+        //         $errTyp = "success";
             
                 
-                $to      = $email; // Send email to our user
-                $subject = 'Activate your account on VenturaHunt'; // Give the email a subject 
-                $message =  '
-                    <html>
-                        <body style="background-color:#f1f1f1;">
-                            <h2 style=" border-radius:2px;margin-top:6%;text-align:center; color:#191970;margin-bottom:-1.2%; padding-bottom:5px;padding-top:5px;background-color:#6495ED;margin-left:20%;margin-right:20%;">VenturaHunt 2.0</h2>
-                            <div style="background-color:#98FB98; margin-left:20%;margin-right:20%; border-radius:4px;">
-                                <p style="font-family: \'Abel\', sans-serif;font-size:15px;   background-color:#98FB98; margin-left:2%;margin-right:2%;padding-top:12px; padding-left:1.6%;">
-                                    <br/>Hi <b><i>'.$name.',</b></i><br/><br/>
-                                </p>
-                                <p style="font-family: \'Abel\', sans-serif;font-size:15px;background-color:#98FB98; margin-left:2%;margin-right:2%; padding-left:1.6%;">
-                                    Thanks for signing up!<br/>
-                                </p>
-                                <p style="font-family: \'Abel\', sans-serif;font-size:15px; background-color:#98FB98; margin-left:2%;margin-right:2%; padding-left:1.6%;">
-                                    Your account has been created, please verify your account by pressing the button below.<br/><br/>
-                                </p>
-                                <p style="font-family: \'Abel\', sans-serif;font-size:15px; border-radius:2px; background-color:#98FB98; margin-left:2%;margin-right:2%; padding-left:1.6%;">
-                                    <a href="https://venturahunt.co.in/verify.php?username='.$username.'&hash='.$hash.'" style="margin-left:35%;  padding: 4px 10px;background: #6495ED; border: solid 1px #20538D; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);  text-decoration: none;color: #FFF; border-radius:4px;">Confirm Your Account</a><br/><br/>
-                                </p>
-                                <p style="font-family: \'Abel\', sans-serif;font-size:15px;  background-color:#98FB98; margin-left:2%;margin-right:2%; padding-left:1.6%;">
-                                    Or, just open this link to activate your account:<br/>
-                                </p>
-                                <p style="font-family: \'Abel\', sans-serif;font-size:15px;  background-color:#98FB98; margin-left:2%;margin-right:2%; padding-left:1.6%;">
-                                    https://venturahunt.co.in/verify.php?username='.$username.'&hash='.$hash.'  
-                                </p>
-                                <p style="padding-bottom:3px; font-family: \'Abel\', sans-serif;font-size:15px;  background-color:#98FB98;padding-left:1.6%; margin-left:2%;margin-right:2%;">
-                                    <br/><br/>Regards,<br/>
-                                </p>
-                                <p style="font-family: \'Abel\', sans-serif;font-size:15px;  background-color:#98FB98; margin-left:2%;margin-right:2%; padding-left:1.6%;">
-                                    Team VenturaHunt<br/>
-                                </p>
-                            </div>
-                            <p style="margin-top:2%;background-color:#F5DEB3; border-radius:2px;padding-left:1.6%; font-family: \'Abel\', sans-serif;font-size:12px;  margin-left:20%;margin-right:20%;">
-                                Please ignore this email if you have already activated your account on VenturaHunt. 
-                            </p>
-                        </body>
-                    </html>
-                '; // Our message above including the link
+        //         $to      = $email; // Send email to our user
+        //         $subject = 'Activate your account on VenturaHunt'; // Give the email a subject 
+        //         $message =  '
+        //             <html>
+        //                 <body style="background-color:#f1f1f1;">
+        //                     <h2 style=" border-radius:2px;margin-top:6%;text-align:center; color:#191970;margin-bottom:-1.2%; padding-bottom:5px;padding-top:5px;background-color:#6495ED;margin-left:20%;margin-right:20%;">VenturaHunt 2.0</h2>
+        //                     <div style="background-color:#98FB98; margin-left:20%;margin-right:20%; border-radius:4px;">
+        //                         <p style="font-family: \'Abel\', sans-serif;font-size:15px;   background-color:#98FB98; margin-left:2%;margin-right:2%;padding-top:12px; padding-left:1.6%;">
+        //                             <br/>Hi <b><i>'.$name.',</b></i><br/><br/>
+        //                         </p>
+        //                         <p style="font-family: \'Abel\', sans-serif;font-size:15px;background-color:#98FB98; margin-left:2%;margin-right:2%; padding-left:1.6%;">
+        //                             Thanks for signing up!<br/>
+        //                         </p>
+        //                         <p style="font-family: \'Abel\', sans-serif;font-size:15px; background-color:#98FB98; margin-left:2%;margin-right:2%; padding-left:1.6%;">
+        //                             Your account has been created, please verify your account by pressing the button below.<br/><br/>
+        //                         </p>
+        //                         <p style="font-family: \'Abel\', sans-serif;font-size:15px; border-radius:2px; background-color:#98FB98; margin-left:2%;margin-right:2%; padding-left:1.6%;">
+        //                             <a href="https://venturahunt.co.in/verify.php?username='.$username.'&hash='.$hash.'" style="margin-left:35%;  padding: 4px 10px;background: #6495ED; border: solid 1px #20538D; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);  text-decoration: none;color: #FFF; border-radius:4px;">Confirm Your Account</a><br/><br/>
+        //                         </p>
+        //                         <p style="font-family: \'Abel\', sans-serif;font-size:15px;  background-color:#98FB98; margin-left:2%;margin-right:2%; padding-left:1.6%;">
+        //                             Or, just open this link to activate your account:<br/>
+        //                         </p>
+        //                         <p style="font-family: \'Abel\', sans-serif;font-size:15px;  background-color:#98FB98; margin-left:2%;margin-right:2%; padding-left:1.6%;">
+        //                             https://venturahunt.co.in/verify.php?username='.$username.'&hash='.$hash.'  
+        //                         </p>
+        //                         <p style="padding-bottom:3px; font-family: \'Abel\', sans-serif;font-size:15px;  background-color:#98FB98;padding-left:1.6%; margin-left:2%;margin-right:2%;">
+        //                             <br/><br/>Regards,<br/>
+        //                         </p>
+        //                         <p style="font-family: \'Abel\', sans-serif;font-size:15px;  background-color:#98FB98; margin-left:2%;margin-right:2%; padding-left:1.6%;">
+        //                             Team VenturaHunt<br/>
+        //                         </p>
+        //                     </div>
+        //                     <p style="margin-top:2%;background-color:#F5DEB3; border-radius:2px;padding-left:1.6%; font-family: \'Abel\', sans-serif;font-size:12px;  margin-left:20%;margin-right:20%;">
+        //                         Please ignore this email if you have already activated your account on VenturaHunt. 
+        //                     </p>
+        //                 </body>
+        //             </html>
+        //         '; // Our message above including the link
                                     
-                $headers = 'From:no-reply@venturahunt.co.in' . "\r\n"; // Set from headers
-                $headers .= "MIME-Version: 1.0\r\n";
-                $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
-                mail($to, $subject, $message, $headers); // Send our email
+        //         $headers = 'From:no-reply@venturahunt.co.in' . "\r\n"; // Set from headers
+        //         $headers .= "MIME-Version: 1.0\r\n";
+        //         $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+        //         mail($to, $subject, $message, $headers); // Send our email
                 
                 
                 
-                $errMSG = "Successfully registered. Your account will be automatically activated after verfication under 2 hours.";
+        //         $errMSG = "Successfully registered. Your account will be automatically activated after verfication under 2 hours.";
                 
-                unset($username);
-                unset($email);
-                unset($password);
-            } else {
-                $errTyp = "danger";
-                $errMSG = "Something went wrong, try again later..."; 
-            } 
+        //         unset($username);
+        //         unset($email);
+        //         unset($password);
+        //     } else {
+        //         $errTyp = "danger";
+        //         $errMSG = "Something went wrong, try again later..."; 
+        //     } 
             
-        }
+        // }
     
-    
-    }
+    // }
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -223,7 +222,7 @@
     
     <script>
         function enableBtn(){
-            document.getElementById("submit").disabled = false;
+            // document.getElementById("submit").disabled = false;
         }
     </script>
     
@@ -420,6 +419,9 @@
         </div>
     </section>
 
+    <div>
+        <h3 style="color: red; text-align: center;">Registration Closed.</h3>
+    </div>
 
     <div class="container">
         <div id="login-form">

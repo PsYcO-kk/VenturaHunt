@@ -37,6 +37,7 @@
 		$thint=$usernameResult['thint'];
 		if($valueHint==1&&$thint<5) {
 			$points-=50;
+			if($usernameResult['current'] >= 14) $points-=25;
 			$thint++;
 			echo $questionResult['hint1'];
 		} else if($thint>=5) {

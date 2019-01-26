@@ -1,4 +1,7 @@
-<?php include('header_vh.php'); ?>
+<?php
+    include('header_vh.php');
+    $title='Leaderboard';
+?>
 
 <?php include('leaderboardcontent.php'); ?>
 
