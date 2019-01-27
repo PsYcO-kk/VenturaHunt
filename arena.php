@@ -33,7 +33,7 @@
 	<div style="margin-left:94%;">
 		<div class="fb-like pull-right" style="position:fixed;float:right;margin-left:31px;margin-top:80px;z-index:1;" data-href="https://www.facebook.com/venturahunt/" data-layout="box_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
 	</div>
-	<div id="count-down" data-date="2019-01-27 18:00:00" class="pull-right col-4 " style="height:100px; margin-right:25px;margin-top:-60px;">
+	<div id="count-down" data-date="2019-01-27 21:00:00" class="pull-right col-4 " style="height:100px; margin-right:25px;margin-top:-60px;">
 		<h6 style="margin-right:300px;float:center;">&nbsp;&nbsp;&nbsp;&nbsp;HUNT ENDS IN -</h6>                             
 	</div>
 </div>
