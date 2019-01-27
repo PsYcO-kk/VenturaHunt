@@ -116,47 +116,6 @@
 
     <script type='text/javascript'>
         $(document).ready(function() {
-            $("#answerbutton").click(function() {
-                var useranswer = $("#answertext").val();
-                var questionpath = $("#questionPic").attr('src');
-                $.post('checkanswer.php', {'questionpath': questionpath, 'useranswer': useranswer}, function(data) {
-                    if(data==="true") {
-                        $("#answercorrectlabel").html("Congratulations Key Accepted! Now you can move to next level.");
-                        $("#answercorrectlabel").removeClass("alert");
-                        $("#answercorrectlabel").css("background-color","#5bc0de");
-                        $("#answercorrectlabel").css("color","#000000");
-                        $("#answercorrectlabel").css("font-size","16px");
-                        $("#changecolor").css("background-color","#5bc0de");
-
-                        $('.levelButton').each(function(){
-                            if($(this).hasClass('active')) {
-                                $(this).removeClass('active').addClass('solved');
-                            } 
-                        });
-                    } else {
-                        $("#answercorrectlabel").removeClass("success");
-                
-                        $("#answercorrectlabel").html(data);
-                        $("#answercorrectlabel").css("font-size","16px");
-                        $("#changecolor").css("background-color","#E65100");
-                        $("#answercorrectlabel").css("background-color","#f2dede");
-                        $("#answercorrectlabel").css("color","#000000");
-                    }
-                    $('#answertext').val('');
-                    // $('#getHint').val('');
-                });
-            });
-
-            $("#linkHint").click(function() {
-                var questionpath = $("#questionPic").attr('src');
-                //alert(questionpath);
-                $.post('checkHint.php', {'questionpath': questionpath}, function(data) {
-                    $("#getHint").val(data);
-                    $.get('checkHintsLeft.php', function(data) {
-                        $('#hints-left').html('Hints left '+data);
-                    });
-                });
-            });
 
             $('#photoimg').live('change', function()  
             { 
