@@ -20,7 +20,7 @@
             <!--End Contact Form-->
 
             <!--Important Links-->
-            <div id="tweets" class="span3">
+            <div id="tweets" class="span2">
                 <h4>MENU</h4>
                 <div>
                     <ul class="arrow">
@@ -34,8 +34,8 @@
             <!--Important Links-->
 
             <!--Archives-->
-            <div id="archives" class="span5 ">
-                <div class="span6">
+            <div id="archives" class="span6 ">
+                <div class="span4">
                     <ul class="arrow">
                         <h4><a data-toggle="modal" href="#coordinators1">Coordinators</a></h4>
                         <li>Saket Gupta</li>
@@ -44,7 +44,7 @@
                         <li>Akash Nirwan</li>
                     </ul>
                 </div>
-                <div class="span6">
+                <div class="span4">
                     <ul class="arrow">
                         <h4><a data-toggle="modal" href="#coordinators">Organizers</a></h4>
                         <li>Vikas Yadav</li>
@@ -52,6 +52,14 @@
                         <li>Nitesh Bhoi</li>
                         <li>Mayank Kumar</li>
                         <li>Kumar Kshitij</li> 
+                    </ul>
+                </div>
+                <div class="span4">
+                    <ul class="arrow">
+                        <h4><a data-toggle="modal" href="#coordinators2">Special Thanks To</a></h4>
+                        <li>Amit Kumar Jena</li>
+                        <li>Himanshu Raghuwanshi</li>
+                        <li>Aryan Gaurav</li>
                     </ul>
                 </div>
             </div>
@@ -206,3 +214,56 @@
     </div>
 </div>
 <!--/organisers -->
+
+<!--coordinators -->
+<div class="center">
+    <div class="modal hide fade in " id="coordinators2" aria-hidden="false" >
+        <div class="modal-header">
+            <i class="icon icon-remove" style=" background-color:#FF6347;" data-dismiss="modal" aria-hidden="true"></i>
+            <h3  class="center" >Special Thanks To</h3>
+        </div>
+
+        <!--Modal Body-->
+        <div class="modal-body well "style="width:auto; height:350px; " >
+            <div class="container-a1  center">
+                <ul class="caption-style-1 ">
+                    <li>
+                        <img src="coordinatorsimages/amit.jpg" class="img-circle"style="height:110px;padding:20px; margin-right:10px; " />
+                        <div class="caption">
+                            <a href="https://www.facebook.com/amitkumar.jena.165" target="blank">
+                                <div class="blur" style="width: 150px; height: 150px;"></div>
+                                <div class="caption-text " style="margin-left:-10px;">
+                                    <h1>Amit Kumar Jena</h1>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="coordinatorsimages/himanshu.jpg" class="img-circle"style="height:110px;padding:20px; margin-right:10px; " />
+                        <div class="caption">
+                            <a href="https://www.facebook.com/himanshu.raghuwanshi.58910" target="blank">
+                                <div class="blur" style="width: 150px; height: 150px;"></div>
+                                <div class="caption-text " style="margin-left:-10px;">
+                                    <h1>Himanshu Raghuwanshi</h1>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="coordinatorsimages/aryan.jpg" class="img-circle"style="height:110px;padding:20px; margin-right:10px; " />
+                        <div class="caption">
+                            <a href="https://www.facebook.com/aryan.gaurav.5" target="blank">
+                                <div class="blur" style="width: 150px; height: 150px;"></div>
+                                <div class="caption-text " style="margin-left:-10px;">
+                                    <h1>Aryan Gaurav</h1>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--/Modal Body-->
+    </div>
+</div>
+<!--/coordinators -->
